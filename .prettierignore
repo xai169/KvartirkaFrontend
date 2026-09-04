@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+.vite
+pnpm-lock.yaml
+src/routeTree.gen.ts
+
+# Документация имеет собственное форматирование и не входит в frontend format check.
+AGENTS.md
+docs
