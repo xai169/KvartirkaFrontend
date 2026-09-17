@@ -1,7 +1,7 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "node:url";
 
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [
@@ -11,7 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       // Этот alias должен совпадать с paths в tsconfig.app.json.
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      app: fileURLToPath(new URL("./src/app", import.meta.url)),
     },
   },
-})
+});

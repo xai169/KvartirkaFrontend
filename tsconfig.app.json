@@ -28,7 +28,7 @@
 
     /* Alias синхронизирован с resolve.alias в vite.config.ts. */
     "paths": {
-      "@/*": ["./src/*"]
+      "app/*": ["./src/app/*"]
     }
   },
   "include": ["src"]
