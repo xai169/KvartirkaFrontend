@@ -245,8 +245,8 @@ Frontend:
 ## 6.1. Расположение
 
 ```text
-src/shared/api/api-client.ts
-src/shared/api/api-error.ts
+src/shared/api/apiClient.ts
+src/shared/api/apiError.ts
 src/shared/api/api.types.ts
 ```
 
@@ -981,12 +981,12 @@ CSS Modules использовать для собственного визуа�
 Файл располагается рядом с компонентом:
 
 ```text
-savings-summary/
-├── savings-summary.tsx
-└── savings-summary.module.css
+savingsSummary/
+├── SavingsSummary.tsx
+└── SavingsSummary.module.css
 ```
 
-Имена файлов — `<component-name>.module.css`; class names внутри module должны оставаться локальными и осмысленными.
+Имя CSS Module повторяет `PascalCase`-имя компонента; class names внутри module должны оставаться локальными и осмысленными.
 
 ## 16.5. Глобальные стили и import order
 
@@ -1444,13 +1444,17 @@ Theme selector управляет только локальной настрой
 
 ## 29.3. Naming
 
-- files — kebab-case;
-- component styles — `<component-name>.module.css` рядом с component-файлом;
+- React component files — PascalCase, например `SavingsSummary.tsx`;
+- component styles — файл с тем же PascalCase-именем и suffix `.module.css` рядом с component-файлом;
+- остальные source-файлы и многословные каталоги — camelCase;
+- kebab-case в именах source-файлов и каталогов не используется;
 - CSS Module class names — локальные camelCase-имена по смыслу элемента или состояния;
 - components/types — PascalCase;
 - functions/variables — camelCase;
 - constants — camelCase либо UPPER_SNAKE_CASE только для настоящих глобальных constants;
 - boolean names — `is`, `has`, `can`, `should`.
+
+Исключения допустимы для имён, которые задаёт tooling, code generation или file-based routing, например `vite-env.d.ts`, `routeTree.gen.ts` и route-файлы TanStack Router.
 
 ## 29.4. Props
 

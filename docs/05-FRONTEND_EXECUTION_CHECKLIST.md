@@ -91,7 +91,7 @@ pnpm build
 | `.gitignore` | 1 | dependencies, build output, cache и local env |
 | `src/app/theme.ts` | 3 | Mantine tokens, breakpoints и component defaults |
 | global stylesheet | 3 | только `html`, `body`, `#root` и общий baseline |
-| `src/app/query-client.ts` | 6 | общие TanStack Query policies |
+| `src/app/queryClient.ts` | 6 | общие TanStack Query policies |
 | PWA manifest/service worker | 12 | installability, caching и update behavior |
 
 ---
@@ -255,7 +255,7 @@ CSS Modules поддерживаются Vite и не требуют отдел�
 
 1. Создать `app`, `routes`, `pages`, `features`, `shared` по мере появления первых файлов.
 2. Зафиксировать направление зависимостей из архитектурного документа.
-3. Использовать named exports и kebab-case.
+3. Использовать named exports, `PascalCase` для component-файлов и `camelCase` для остальных source-файлов и многословных каталогов.
 4. Не создавать barrel `index.ts`.
 5. CSS Module компонента хранить рядом с ним.
 

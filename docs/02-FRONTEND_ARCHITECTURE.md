@@ -172,7 +172,7 @@ ProfilePage
 profile feature → импортирует внутренности auth feature
 ```
 
-Если всё же требуется использовать query options текущего пользователя, page импортирует их напрямую из конкретного файла `features/auth/api/auth-queries.ts` и передаёт данные дочернему компоненту.
+Если всё же требуется использовать query options текущего пользователя, page импортирует их напрямую из конкретного файла `features/auth/api/authQueries.ts` и передаёт данные дочернему компоненту.
 
 ---
 
@@ -184,11 +184,11 @@ src/
 ├── routeTree.gen.ts
 │
 ├── app/
-│   ├── app-providers.tsx
-│   ├── app-router.ts
-│   ├── app-shell.tsx
-│   ├── app-shell.module.css
-│   ├── query-client.ts
+│   ├── AppProviders.tsx
+│   ├── appRouter.ts
+│   ├── AppShell.tsx
+│   ├── AppShell.module.css
+│   ├── queryClient.ts
 │   ├── theme.ts
 │   └── navigation.ts
 │
@@ -201,88 +201,88 @@ src/
 │   └── _authenticated.profile.tsx
 │
 ├── pages/
-│   ├── login-page/
-│   │   ├── login-page.tsx
-│   │   └── login-page.module.css
-│   ├── savings-page/
-│   │   └── savings-page.tsx
-│   ├── purchases-page/
-│   │   └── purchases-page.tsx
-│   └── profile-page/
-│       └── profile-page.tsx
+│   ├── loginPage/
+│   │   ├── LoginPage.tsx
+│   │   └── LoginPage.module.css
+│   ├── savingsPage/
+│   │   └── SavingsPage.tsx
+│   ├── purchasesPage/
+│   │   └── PurchasesPage.tsx
+│   └── profilePage/
+│       └── ProfilePage.tsx
 │
 ├── features/
 │   ├── auth/
 │   │   ├── api/
-│   │   │   ├── auth-api.ts
-│   │   │   └── auth-queries.ts
+│   │   │   ├── authApi.ts
+│   │   │   └── authQueries.ts
 │   │   ├── model/
 │   │   │   └── auth.types.ts
 │   │   └── ui/
-│   │       └── login-form.tsx
+│   │       └── LoginForm.tsx
 │   │
 │   ├── savings/
 │   │   ├── api/
-│   │   │   ├── savings-api.ts
-│   │   │   └── savings-queries.ts
+│   │   │   ├── savingsApi.ts
+│   │   │   └── savingsQueries.ts
 │   │   ├── model/
 │   │   │   ├── savings.types.ts
-│   │   │   ├── calculate-savings-overview.ts
-│   │   │   ├── calculate-monthly-savings-plan.ts
+│   │   │   ├── calculateSavingsOverview.ts
+│   │   │   ├── calculateMonthlySavingsPlan.ts
 │   │   │   └── savings.schemas.ts
 │   │   └── ui/
-│   │       ├── savings-hero-card.tsx
-│   │       ├── monthly-savings-card.tsx
-│   │       ├── savings-history.tsx
-│   │       ├── saving-entry-card.tsx
-│   │       ├── saving-entry-drawer.tsx
-│   │       └── savings-goal-drawer.tsx
+│   │       ├── SavingsHeroCard.tsx
+│   │       ├── MonthlySavingsCard.tsx
+│   │       ├── SavingsHistory.tsx
+│   │       ├── SavingEntryCard.tsx
+│   │       ├── SavingEntryDrawer.tsx
+│   │       └── SavingsGoalDrawer.tsx
 │   │
 │   ├── purchases/
 │   │   ├── api/
-│   │   │   ├── purchases-api.ts
-│   │   │   └── purchases-queries.ts
+│   │   │   ├── purchasesApi.ts
+│   │   │   └── purchasesQueries.ts
 │   │   ├── model/
 │   │   │   ├── purchase.types.ts
 │   │   │   ├── purchase.constants.ts
 │   │   │   ├── purchase.schemas.ts
-│   │   │   ├── calculate-purchases-summary.ts
-│   │   │   ├── filter-purchases.ts
-│   │   │   ├── sort-purchases.ts
-│   │   │   └── group-purchases.ts
+│   │   │   ├── calculatePurchasesSummary.ts
+│   │   │   ├── filterPurchases.ts
+│   │   │   ├── sortPurchases.ts
+│   │   │   └── groupPurchases.ts
 │   │   └── ui/
-│   │       ├── purchases-summary.tsx
-│   │       ├── purchases-filters.tsx
-│   │       ├── purchase-list.tsx
-│   │       ├── purchase-card.tsx
-│   │       └── purchase-drawer.tsx
+│   │       ├── PurchasesSummary.tsx
+│   │       ├── PurchasesFilters.tsx
+│   │       ├── PurchaseList.tsx
+│   │       ├── PurchaseCard.tsx
+│   │       └── PurchaseDrawer.tsx
 │   │
 │   └── profile/
 │       └── ui/
-│           ├── profile-summary.tsx
-│           └── theme-selector.tsx
+│           ├── ProfileSummary.tsx
+│           └── ThemeSelector.tsx
 │
 └── shared/
     ├── api/
-    │   ├── api-client.ts
-    │   ├── api-error.ts
+    │   ├── apiClient.ts
+    │   ├── apiError.ts
     │   └── api.types.ts
     ├── config/
     │   └── env.ts
     ├── lib/
     │   ├── dates/
-    │   │   ├── format-date.ts
-    │   │   └── parse-api-date.ts
+    │   │   ├── formatDate.ts
+    │   │   └── parseApiDate.ts
     │   └── money/
-    │       ├── format-money.ts
-    │       ├── parse-money-input.ts
+    │       ├── formatMoney.ts
+    │       ├── parseMoneyInput.ts
     │       └── money.types.ts
     ├── ui/
-    │   ├── app-error-state.tsx
-    │   ├── confirmation-dialog.tsx
-    │   ├── empty-state.tsx
-    │   ├── page-header.tsx
-    │   └── page-loader.tsx
+    │   ├── AppErrorState.tsx
+    │   ├── ConfirmationDialog.tsx
+    │   ├── EmptyState.tsx
+    │   ├── PageHeader.tsx
+    │   └── PageLoader.tsx
     └── styles/
         └── globals.css
 ```
@@ -292,9 +292,9 @@ src/
 Если компоненту требуется собственное визуальное оформление, CSS Module располагается рядом с ним и повторяет имя component-файла:
 
 ```text
-savings-summary/
-├── savings-summary.tsx
-└── savings-summary.module.css
+savingsSummary/
+├── SavingsSummary.tsx
+└── SavingsSummary.module.css
 ```
 
 CSS Module не создаётся только ради `Stack`, `Group`, простого `gap`, `padding` или другого элементарного layout, который ясно выражается Mantine-компонентами и style props.
@@ -307,7 +307,7 @@ CSS Module не создаётся только ради `Stack`, `Group`, пр�
 
 `app` содержит только глобальную инфраструктуру приложения.
 
-## 6.1. `app-providers.tsx`
+## 6.1. `AppProviders.tsx`
 
 Собирает providers верхнего уровня:
 
@@ -321,7 +321,7 @@ PWA update integration при необходимости
 
 Provider не должен содержать предметные запросы накоплений или покупок.
 
-## 6.2. `query-client.ts`
+## 6.2. `queryClient.ts`
 
 Содержит конфигурацию единственного `QueryClient`:
 
@@ -342,7 +342,7 @@ Provider не должен содержать предметные запрос�
 
 Конкретные цвета статуса покупок могут находиться в `purchase.constants.ts`, если они имеют предметный смысл.
 
-## 6.4. `app-shell.tsx`
+## 6.4. `AppShell.tsx`
 
 Отвечает за:
 
@@ -479,14 +479,14 @@ ui/
 Пример разделения:
 
 ```text
-savings-api.ts
+savingsApi.ts
 → чистые async HTTP-функции
 
-savings-queries.ts
+savingsQueries.ts
 → TanStack Query queryOptions/mutationOptions
 ```
 
-`api-client` не знает о TanStack Query, а HTTP-функции не должны напрямую показывать notifications.
+`apiClient` не знает о TanStack Query, а HTTP-функции не должны напрямую показывать notifications.
 
 ## 9.2. `model`
 
@@ -524,7 +524,7 @@ UI не должен копировать правила backend validation вр
 
 ## 10.1. Единая точка HTTP
 
-Все HTTP-запросы проходят через `shared/api/api-client.ts`.
+Все HTTP-запросы проходят через `shared/api/apiClient.ts`.
 
 Он отвечает за:
 
@@ -847,7 +847,7 @@ CSS Modules не должны содержать хаотично продубл
 
 CSS Module принадлежит тому же архитектурному уровню, что и компонент:
 
-- стили `AppShell` находятся рядом с `app-shell.tsx`;
+- стили `AppShell` находятся рядом с `AppShell.tsx`;
 - стили page-композиции — рядом с соответствующей page;
 - стили feature-компонента — внутри `features/<feature>/ui` рядом с компонентом;
 - стили действительно общего UI — рядом с компонентом в `shared/ui`.
@@ -1004,15 +1004,18 @@ new Date("2027-06-30")
 
 # 22. Правила именования и размещения
 
-- Файлы — `kebab-case`.
-- React-компоненты — `PascalCase` внутри файла.
+- Файлы React-компонентов — `PascalCase`, например `AppShell.tsx`.
+- CSS Module компонента повторяет его имя: `AppShell.module.css`.
+- Остальные source-файлы и многословные каталоги — `camelCase`, например `queryClient.ts` и `loginPage/`.
+- `kebab-case` в именах source-файлов и каталогов не используется.
+- React-компоненты внутри файла — `PascalCase`.
 - Functions/variables — `camelCase`.
 - Типы/interfaces — `PascalCase`.
 - Named exports — по умолчанию.
 - Default export используется только если его требует конкретный инструмент.
 - Один главный компонент или одна главная ответственность на файл.
 - Файл размещается рядом с областью, которой принадлежит его смысл.
-- CSS Module компонента называется `<component-name>.module.css` и располагается рядом с `<component-name>.tsx`.
+- Имена, которые диктует инструмент, generator или file-based routing, могут отступать от этого правила; например `vite-env.d.ts`, `routeTree.gen.ts` и route-файлы TanStack Router.
 - Не создавать `index.ts` для реэкспорта.
 
 ---

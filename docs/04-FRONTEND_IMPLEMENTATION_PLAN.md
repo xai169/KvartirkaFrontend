@@ -837,7 +837,7 @@ AppShell должен содержать:
 
 Login page не должна использовать основной authenticated shell.
 
-Простые отступы и композицию shell выражать Mantine props. Собственный `app-shell.module.css` использовать для fixed navigation, safe-area, сложного позиционирования и responsive-перехода между mobile и desktop.
+Простые отступы и композицию shell выражать Mantine props. Собственный `AppShell.module.css` использовать для fixed navigation, safe-area, сложного позиционирования и responsive-перехода между mobile и desktop.
 
 ### 11.2. Реализовать навигацию
 
