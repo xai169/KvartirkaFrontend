@@ -1,0 +1,19 @@
+.history {
+    overflow: hidden;
+}
+.entry {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+}
+.entry + .entry {
+    border-top: 1px solid var(--mantine-color-default-border);
+}
+.entryInfo {
+    min-width: 0;
+}
+.comment {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}

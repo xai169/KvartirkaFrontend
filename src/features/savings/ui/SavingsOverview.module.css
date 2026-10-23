@@ -1,0 +1,15 @@
+.goal {
+    background: light-dark(var(--mantine-color-teal-0), var(--mantine-color-dark-6));
+}
+.total {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    font-variant-numeric: tabular-nums;
+}
+.monthTotal {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    font-variant-numeric: tabular-nums;
+}

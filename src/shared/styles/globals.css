@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+#root {
+    min-height: 100vh;
+}
+
+html {
+    color-scheme: light;
+}
+html[data-mantine-color-scheme="dark"] {
+    color-scheme: dark;
+}
+body {
+    background: var(--mantine-color-body);
+}
+* {
+    box-sizing: border-box;
+}
+:focus-visible {
+    outline: 2px solid var(--mantine-primary-color-filled);
+    outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

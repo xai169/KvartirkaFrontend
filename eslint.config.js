@@ -8,32 +8,32 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default defineConfig([
-  // Generated и build-файлы не должны участвовать в lint.
-  globalIgnores(["dist/**", "coverage/**", "src/routeTree.gen.ts"]),
-  {
-    name: "base-javascript-and-typescript",
-    files: ["**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"],
-    extends: [js.configs.recommended, tseslint.configs.recommended],
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+    // Generated и build-файлы не должны участвовать в lint.
+    globalIgnores(["dist/**", "coverage/**", "src/routeTree.gen.ts"]),
+    {
+        name: "base-javascript-and-typescript",
+        files: ["**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"],
+        extends: [js.configs.recommended, tseslint.configs.recommended],
+        languageOptions: {
+            ecmaVersion: "latest",
+            sourceType: "module",
+        },
     },
-  },
-  {
-    name: "browser-application",
-    files: ["src/**/*.{js,jsx,ts,tsx}"],
-    extends: [reactHooks.configs.flat.recommended, reactRefresh.configs.vite, ...query.configs["flat/recommended"]],
-    languageOptions: {
-      globals: globals.browser,
+    {
+        name: "browser-application",
+        files: ["src/**/*.{js,jsx,ts,tsx}"],
+        extends: [reactHooks.configs.flat.recommended, reactRefresh.configs.vite, ...query.configs["flat/recommended"]],
+        languageOptions: {
+            globals: globals.browser,
+        },
     },
-  },
-  {
-    name: "node-configuration",
-    files: ["*.config.{js,cjs,mjs,ts,mts}", "vite.config.ts"],
-    languageOptions: {
-      globals: globals.node,
+    {
+        name: "node-configuration",
+        files: ["*.config.{js,cjs,mjs,ts,mts}", "vite.config.ts"],
+        languageOptions: {
+            globals: globals.node,
+        },
     },
-  },
-  // Этот config отключает stylistic rules, которые конфликтуют с Prettier.
-  prettier,
+    // Этот config отключает stylistic rules, которые конфликтуют с Prettier.
+    prettier,
 ]);

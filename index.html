@@ -1,18 +1,30 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Квартирка</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script
-      type="module"
-      src="/src/main.tsx"
-    ></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>Квартирка</title>
+        <meta
+            name="description"
+            content="Общие накопления и покупки для вашего дома"
+        />
+        <script>
+            try {
+                document.documentElement.dataset.mantineColorScheme =
+                    localStorage.getItem("mantine-color-scheme-value") === "dark" ? "dark" : "light";
+            } catch {
+                document.documentElement.dataset.mantineColorScheme = "light";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script
+            type="module"
+            src="/src/main.tsx"
+        ></script>
+    </body>
 </html>

@@ -1,0 +1,87 @@
+.shell {
+    min-height: 100dvh;
+    background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
+}
+.header {
+    border-bottom: 1px solid var(--mantine-color-default-border);
+    background: var(--mantine-color-body);
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--mantine-color-text);
+}
+.desktopNav {
+    display: flex;
+    gap: 8px;
+}
+.navLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: var(--mantine-radius-md);
+    color: var(--mantine-color-dimmed);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        background-color 150ms,
+        color 150ms;
+}
+.navLink:hover {
+    background: var(--mantine-color-default-hover);
+}
+.navLink[data-status="active"] {
+    background: var(--mantine-primary-color-light);
+    color: var(--mantine-primary-color-light-color);
+}
+.main {
+    padding-top: 32px;
+    padding-bottom: 48px;
+}
+.mobileNav {
+    display: none;
+}
+.skipLink {
+    position: fixed;
+    top: -100px;
+    left: 16px;
+    z-index: 400;
+    padding: 12px;
+    background: var(--mantine-color-body);
+    color: var(--mantine-color-text);
+}
+.skipLink:focus {
+    top: 8px;
+}
+@media (max-width: $mantine-breakpoint-sm) {
+    .desktopNav {
+        display: none;
+    }
+    .main {
+        padding-top: 24px;
+        padding-bottom: calc(104px + env(safe-area-inset-bottom));
+    }
+    .mobileNav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+        background: var(--mantine-color-body);
+        border-top: 1px solid var(--mantine-color-default-border);
+        z-index: 100;
+    }
+    .mobileNav .navLink {
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+}

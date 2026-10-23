@@ -1,0 +1,14 @@
+.card {
+    min-width: 0;
+}
+.name {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+.amount {
+    overflow-wrap: anywhere;
+    font-variant-numeric: tabular-nums;
+}
+.status {
+    margin-top: auto;
+}

@@ -1,35 +1,36 @@
 {
-  "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2023",
-    "useDefineForClassFields": true,
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "compilerOptions": {
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "target": "ES2023",
+        "useDefineForClassFields": true,
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
 
-    /* Vite обрабатывает каждый модуль отдельно и не использует TypeScript для emit. */
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "resolveJsonModule": true,
-    "erasableSyntaxOnly": true,
+        /* Vite обрабатывает каждый модуль отдельно и не использует TypeScript для emit. */
+        "moduleResolution": "Bundler",
+        "allowImportingTsExtensions": true,
+        "verbatimModuleSyntax": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "resolveJsonModule": true,
+        "erasableSyntaxOnly": true,
 
-    /* Строгие проверки помогают находить ошибки до запуска приложения. */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "forceConsistentCasingInFileNames": true,
+        /* Строгие проверки помогают находить ошибки до запуска приложения. */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
+        "forceConsistentCasingInFileNames": true,
 
-    /* Alias синхронизирован с resolve.alias в vite.config.ts. */
-    "paths": {
-      "app/*": ["./src/app/*"]
-    }
-  },
-  "include": ["src"]
+        /* Alias синхронизирован с resolve.alias в vite.config.ts. */
+        "paths": {
+            "app/*": ["./src/app/*"],
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["src"]
 }
