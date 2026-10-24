@@ -28,6 +28,13 @@ export default defineConfig([
         },
     },
     {
+        name: "service-worker",
+        files: ["public/pwa-update.js"],
+        languageOptions: {
+            globals: globals.serviceworker,
+        },
+    },
+    {
         name: "node-configuration",
         files: ["*.config.{js,cjs,mjs,ts,mts}", "vite.config.ts"],
         languageOptions: {

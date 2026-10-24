@@ -5,6 +5,7 @@ import type { PropsWithChildren } from "react";
 import { theme } from "./theme";
 import { queryClient } from "./queryClient";
 import { NetworkStatus } from "@/shared/ui/NetworkStatus";
+import { PwaUpdates } from "./PwaUpdates";
 
 export function AppProviders({ children }: PropsWithChildren) {
     return (
@@ -18,6 +19,7 @@ export function AppProviders({ children }: PropsWithChildren) {
             />
             <QueryClientProvider client={queryClient}>
                 <NetworkStatus />
+                <PwaUpdates />
                 {children}
             </QueryClientProvider>
         </MantineProvider>
